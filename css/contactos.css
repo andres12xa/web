@@ -1,0 +1,423 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Valores por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* BODY */
+body {
+    background-color: #080202;
+   /* background: linear-gradient(to top right, #1867a3, #0c426c);*/
+}
+
+/* Section */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+}
+.banner {
+    position: absolute; /* Para posicionar absolutamente dentro del contenedor padre */
+    top: 0; /* Ajustar según necesites */
+    left: 0; /* Ajustar según necesites */
+    width: 100%; /* O ajustar al tamaño deseado */
+    height: 100px; /* Altura fija, como en tu ejemplo */
+    z-index: 1; /* Si es necesario, ajustar el orden de apilamiento */
+}
+
+/* Contenedor formulario de contacto */
+section .contactForm {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    width: 90%;
+    height: 80%;
+    background: #0d0d0d;
+    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    border-radius: 30px;
+}
+
+section .contactForm .form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 30px;
+}
+
+section .contactForm .form form {
+    width: 100%;
+}
+
+/* Título y descripción */
+section .contactForm .form .texto h2 {
+    color: #FFFFFF;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section .contactForm .form .texto p {
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Cajas de texto */
+section .contactForm .form form .inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Etiquetas e Inputs */
+section .contactForm .form form .inputBox label {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+section .contactForm .form form .inputBox input[type="text"],
+section .contactForm .form form .inputBox input[type="email"],
+section .contactForm .form form .inputBox textarea {
+    border: none;
+    background: #cbebfb;
+    padding: 10px;
+    border-radius: 15px;
+    color: #000000;
+    resize: none;
+}
+
+section .contactForm .form form .inputBox input[type="text"]:focus,
+section .contactForm .form form .inputBox input[type="email"]:focus,
+section .contactForm .form form .inputBox textarea:focus {
+    outline: 2px solid #1766a3;
+}
+
+section .contactForm .form form input[type="submit"] {
+    background: #424141;
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 9px 20px -5px rgba(0, 0, 0, 0.59);
+    transition: 0.3s;
+}
+
+section .contactForm .form form input[type="submit"]:hover {
+    background: #7c7d7e;
+}
+
+/* Contenedor información */
+section .contactForm .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Imagen */
+section .contactForm .info .imgBox {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+section .contactForm .info .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Información de contacto */
+section .contactForm .info .textBox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+section .contactForm .info .textBox .infoContact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+section .contactForm .info .textBox .infoContact ion-icon {
+    font-size: 2em;
+    margin-right: 10px;
+    color: #FFFFFF;
+}
+
+section .contactForm .info .textBox .infoContact p {
+    color: #FFFFFF;
+}
+
+/* Redes sociales */
+section .contactForm .info .rrss a {
+    padding: 20px;
+    font-size: 2em;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+section .contactForm .info .rrss a:hover {
+    color: #DB241B;
+}
+
+/* Breakpoints */
+/* Pantallas largas */
+/*@media only screen and (max-width: 1200px) {
+    section .contactForm {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}*/
+
+/* Laptops y tablets */
+@media(max-width:991px){
+    section .contactForm {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    section .contactForm .info {
+        margin-bottom: 30px;
+    }
+    section .contactForm .info .imgBox {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    section .contactForm .info .textBox{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+   
+    
+    /*    section .contactForm .info {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    section .contactForm .info .imgBox {
+        display: none;
+    }*/
+}
+
+
+/* Celulares */
+/*@media only screen and (max-width: 600px) {
+    section .contactForm .form {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    section .contactForm .info {
+        margin-bottom: 30px;
+    }
+}*/
+/*footer*/
+.footer{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.links h4{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+}
+.links ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo-2{
+    width: 150px;
+}
+.socials{
+    display: flex;
+}
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #DB241B;
+    border-radius: 50%;
+}
+.social:hover{
+    background-color: #DB241B;
+}
+.social img{
+    margin: 8px 0 0 10px;
+}
+.menu{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+.navbar{
+    display: flex;
+}
+.menu-1{
+    margin-right: 180px;
+}
+.menu-2{
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+
+}
+.logo-1{
+    width: 0;
+}
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+}
+.menu .navbar ul li a:hover{
+    color: #DB241B;
+}
+#menu{
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+/*  WHATTA A A*/
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px; /* Ajusta la distancia desde el borde inferior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #25d366; /* Color de fondo de WhatsApp */
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    border: 2px solid #128c7e; /* Contorno */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transiciones */
+    animation: pulse 2s infinite alternate; /* Animación de pulsación */
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Escala el tamaño del icono al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada al pasar el mouse */
+    animation: none; /* Detiene la animación al pasar el mouse */
+}
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+        justify-content: space-between;
+    }
+    .menu-2{
+        display: none;
+    }
+    .logo-1{
+        width: 100px;
+    }
+    .logo-2{
+        width: 0;
+    }
+    .menu label{
+        display: initial;   
+    }
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    .socials{
+        justify-content: center;
+    }
+    .socials img{
+        margin:8px 0 0 0;
+    }
+    .footer{
+        margin: 265px 0px 10px 0px;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .links h4{
+        margin: 25px 0px 10px 0px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
